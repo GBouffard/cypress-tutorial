@@ -6,8 +6,13 @@ describe('my first test', () => {
 
 const myApp = 'http://localhost:3000/';
 
-describe('my next test', () => {
-  it('visits my app', () => {
-    cy.visit(myApp)
+describe('my app', () => {
+  it('exists', () => {
+    cy.visit(myApp);
+  });
+
+  it('checks for text', () => {
+    cy.visit(myApp);
+    cy.contains('Cypress React Tutorial');
   });
 });
